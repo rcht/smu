@@ -1,3 +1,17 @@
+/*
+ * HI IM RACHIT
+ *
+ * this is my smu fork which I use to generate the pages on my website
+ *
+ * it basically just spits out the css and <head> stuff on stdin lmao
+ *
+ * and idk what using the -n argument will do because i dont use it
+ *
+ * thanks for coming to my ted talk
+ *
+ */
+
+
 /* smu - simple markup
  * Copyright (C) <2007, 2008> Enno Boland <g s01 de>
  *
@@ -42,8 +56,8 @@ static Parser parsers[] = { dounderline, docomment, dolineprefix,
 static int nohtml = 0;
 
 static Tag lineprefix[] = {
-	{ "    ",	0,	"<pre><code>", "\n</code></pre>" },
-	{ "\t",		0,	"<pre><code>", "\n</code></pre>" },
+	{ "    ",	0,	"<div class=\"codecontainer\"><pre><code>", "\n</code></pre></div>" },
+	{ "\t",		0,	"<div class=\"codecontainer\"><pre><code>", "\n</code></pre></div>" },
 	{ ">",		2,	"<blockquote>",	"</blockquote>" },
 	{ "###### ",	1,	"<h6>",		"</h6>" },
 	{ "##### ",	1,	"<h5>",		"</h5>" },
@@ -640,6 +654,9 @@ main(int argc, char *argv[]) {
 	int s, i;
 	unsigned long len, bsize;
 	FILE *source = stdin;
+
+    /* BEsT code OF MY LIFE. PERIOd. */
+    printf("<head><style>\n.codecontainer {\ntext-align: center;\n}\n.codecontainer pre {\ndisplay: inline-block;\npadding: 1em 1em 1em 1em;\ntext-align: left;\nborder-style: solid;\n}\nh1{text-align: center;}\n</style><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head>\n");
 
 	for(i = 1; i < argc; i++) {
 		if(!strcmp("-v", argv[i]))
