@@ -656,7 +656,7 @@ main(int argc, char *argv[]) {
 	FILE *source = stdin;
 
     /* BEsT code OF MY LIFE. PERIOd. */
-    printf("<head><style>\n.codecontainer {\ntext-align: center;\n}\n.codecontainer pre {\ndisplay: inline-block;\npadding: 1em 1em 1em 1em;\ntext-align: left;\nborder-style: solid;\n}\nh1{text-align: center;}\n</style><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head>\n");
+    printf("<head><style>\n.codecontainer {\ntext-align: center;\n}\n.codecontainer pre {\ndisplay: inline-block;\npadding: 0.5em 0.5em 0.5em 0.5em;\ntext-align: left;\nborder-style: dotted; border-width: 1px;\n}\nh1{text-align: center;}\n</style><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head>\n");
 
 	for(i = 1; i < argc; i++) {
 		if(!strcmp("-v", argv[i]))
